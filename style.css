@@ -1,0 +1,141 @@
+:root{
+    --color-violet:hsl(263, 55%, 52%);
+    --color-blue-dark:hsl(217, 19%, 35%);
+    --color-blue-ex-dark:hsl(219, 29%, 14%);
+    --color-white:hsl(0, 0%, 100%);
+    --color-grey-light:hsl(0, 0%, 81%);
+    --color-blue-light:hsl(210, 46%, 95%);
+}
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+@media only screen and (max-width:56.25em){
+    html{font-size: 50%;}
+}
+
+body{
+    font-size: 1.3rem;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: var(--color-grey-light);
+    box-sizing: border-box;
+    padding: 2rem;
+    background-color: var(--color-grey-light);
+}
+
+.container{
+    max-width: 114rem;
+    margin: 6rem auto;
+    display: flex;
+    gap: 2rem;
+}
+@media only screen and (max-width:56.25em){
+    .container{
+        flex-direction: column;
+        margin: 0;
+    }
+}
+.content-top,
+.content-bottom{
+    display: flex;
+    gap: 2rem;
+}
+
+
+.content-bottom{
+    margin-top: 2rem;
+}
+
+@media only screen and (max-width:37.5em){
+    .content-top,
+    .content-bottom{
+        flex-direction: column;
+    } 
+    
+}
+.container .content{
+    flex: 1;
+}
+
+.card__side{
+    flex:0 0 30%;
+}
+.card-lg,
+.card-sm{
+    padding: 1.5rem 2.5rem;
+    border-radius: 1rem;
+    box-shadow: .5rem 1.5rem 4rem rgba(0,0,0, .16);
+}
+.card-head{
+    display: flex;
+}
+.card-head .card-img{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: .2rem solid var(--color-grey-light);
+}
+.card-head .heading-3{
+    margin-left: 2rem;
+}
+
+.card-head .heading-3 span{
+    display: block;
+}
+
+.card-lg:first-child{
+    background-color: var(--color-violet);
+    position: relative;
+}
+.card-lg:first-child::before{
+    content: "\201c";
+    font-size: 35rem;
+    position: absolute;
+    top: -8rem;
+    right: 10%;
+    opacity: .5;
+}
+.card-lg:last-child{
+    background-color: var(--color-blue-ex-dark);
+}
+.content .card-sm:first-child{
+    background-color: var(--color-blue-light);
+}
+.content .card-sm:last-child{
+    background-color: var(--color-blue-dark);
+}
+.card__side .card-sm{
+    background-color: var(--color-white);
+}
+
+.card-title{
+    margin: 1.5rem 0;
+    font-weight: 600;
+    color: var(--color-white);
+    position: relative;
+    z-index: 10;
+}
+.card-text{
+    opacity: .7;
+    line-height: 1.4;
+    
+}
+.c-dark{
+    color: var(--color-blue-ex-dark);
+}
+.heading-3 .heading-description{
+    font-size: 1.2rem;
+    margin-top: .5rem;
+    opacity: .7;
+}
+.ln{
+    line-height: 1.50 !important;
+}
